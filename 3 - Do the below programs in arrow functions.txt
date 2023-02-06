@@ -1,0 +1,53 @@
+// Do the below programs in arrow functions
+// Print odd numbers in an array
+
+const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+function findOddNumbers(array) {
+    return array.filter(number => {
+        return number % 2 !== 0;
+    });
+}
+console.log(findOddNumbers(myArr));
+
+// Convert all the strings to title caps in a string array
+
+function titleCaps(str) {
+    return str.split(' ').map((word) => {
+        return word[0].toUpperCase() + word.slice(1)
+    }).join(' ')
+}
+
+console.log(titleCaps("convert all the strings to title caps in a string array"));
+
+// Sum of all numbers in an array
+
+let arrNo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sumOfNo = 0;
+arrNo.forEach(value => {
+    sumOfNo += value;
+});
+console.log(sumOfNo);
+
+// Return all the prime numbers in an array
+
+let myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+function findPrime(myArray) {
+    myArray = myArray.filter((myNumbers) => {
+        for (var i = 2; i <= Math.sqrt(myNumbers); i++) {
+            if (myNumbers % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    });
+    console.log(myArray);
+}
+findPrime(myNumbers);
+
+// Return all the palindromes in an array
+
+const getAllWords = (words) =>
+    words.filter((word) =>
+        word.split("").reverse().join("") === word
+    );
+console.log(getAllWords(["abc", "mom", "madam", "bob"]));
